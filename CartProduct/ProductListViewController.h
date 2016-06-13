@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ProductListViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate>
-
+@property(nonatomic,strong)NSMutableArray *productsAddedToCart;
 
 @end
 
