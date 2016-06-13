@@ -21,6 +21,8 @@
 		EBE80EDC1D0E99700085F14C /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE80EDB1D0E99700085F14C /* Product.m */; };
 		EBE80EE21D0EABDB0085F14C /* CartViewCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE80EE11D0EABDB0085F14C /* CartViewCustomCell.m */; };
 		EBE80EE51D0EACAB0085F14C /* CartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE80EE41D0EACAB0085F14C /* CartViewController.m */; };
+		EBE80EF61D0EBFA40085F14C /* StoredProduct+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE80EF31D0EBFA40085F14C /* StoredProduct+CoreDataProperties.m */; };
+		EBE80EF71D0EBFA40085F14C /* StoredProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE80EF51D0EBFA40085F14C /* StoredProduct.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,10 @@
 		EBE80EE11D0EABDB0085F14C /* CartViewCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartViewCustomCell.m; sourceTree = "<group>"; };
 		EBE80EE31D0EACAB0085F14C /* CartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartViewController.h; sourceTree = "<group>"; };
 		EBE80EE41D0EACAB0085F14C /* CartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartViewController.m; sourceTree = "<group>"; };
+		EBE80EF21D0EBFA40085F14C /* StoredProduct+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "StoredProduct+CoreDataProperties.h"; path = "DataModelHandler/StoredProduct+CoreDataProperties.h"; sourceTree = "<group>"; };
+		EBE80EF31D0EBFA40085F14C /* StoredProduct+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "StoredProduct+CoreDataProperties.m"; path = "DataModelHandler/StoredProduct+CoreDataProperties.m"; sourceTree = "<group>"; };
+		EBE80EF41D0EBFA40085F14C /* StoredProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoredProduct.h; path = DataModelHandler/StoredProduct.h; sourceTree = "<group>"; };
+		EBE80EF51D0EBFA40085F14C /* StoredProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoredProduct.m; path = DataModelHandler/StoredProduct.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,7 @@
 		EBE80E9A1D0E7F9D0085F14C = {
 			isa = PBXGroup;
 			children = (
+				EBE80EF81D0EBFAE0085F14C /* CorreDataHandling */,
 				EBE80EA51D0E7F9D0085F14C /* CartProduct */,
 				EBE80EA41D0E7F9D0085F14C /* Products */,
 			);
@@ -141,6 +148,17 @@
 			path = SeviceManager;
 			sourceTree = "<group>";
 		};
+		EBE80EF81D0EBFAE0085F14C /* CorreDataHandling */ = {
+			isa = PBXGroup;
+			children = (
+				EBE80EF21D0EBFA40085F14C /* StoredProduct+CoreDataProperties.h */,
+				EBE80EF31D0EBFA40085F14C /* StoredProduct+CoreDataProperties.m */,
+				EBE80EF41D0EBFA40085F14C /* StoredProduct.h */,
+				EBE80EF51D0EBFA40085F14C /* StoredProduct.m */,
+			);
+			name = CorreDataHandling;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -213,6 +231,8 @@
 			files = (
 				EBE80ED31D0E8B880085F14C /* ProductDisplayListViewController.m in Sources */,
 				EBE80ECF1D0E82DC0085F14C /* ProductListCustomCell.m in Sources */,
+				EBE80EF61D0EBFA40085F14C /* StoredProduct+CoreDataProperties.m in Sources */,
+				EBE80EF71D0EBFA40085F14C /* StoredProduct.m in Sources */,
 				EBE80EAE1D0E7F9D0085F14C /* ProductListViewController.m in Sources */,
 				EBE80EDC1D0E99700085F14C /* Product.m in Sources */,
 				EBE80EE51D0EACAB0085F14C /* CartViewController.m in Sources */,

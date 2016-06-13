@@ -51,6 +51,11 @@
     customCell.callVendorButton.tag = indexPath.row;
     customCell.removeFromCartButton.tag = indexPath.row;
     customCell.tag = indexPath.section;
+    [manager createRequestToDownloadImage:[NSURL URLWithString:product.productImage] withCallback:^(NSData *data, NSError *error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            customCell.cartProductImageView.image = [UIImage imageWithData:data];
+        });
+    }];
     return customCell;
     
 }
