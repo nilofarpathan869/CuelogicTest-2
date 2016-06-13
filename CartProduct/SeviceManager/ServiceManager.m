@@ -45,6 +45,18 @@ static ServiceManager *serviceManager = nil;
     [dataTask resume];
 }
 
+-(void)createRequestToDownloadImage:(NSURL*)imageUrl withCallback:(DownloadImageBlock)downloadImageTask{
+    NSURLSessionDataTask *downloadTask = [[NSURLSession sharedSession]
+                                          dataTaskWithURL:imageUrl completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+                                              // 4: Handle response here
+                                              if (!error) {
+                                                  downloadImageTask(data,nil);
+                                              }
+                                          }];
+    
+    
+    // 3
+    [downloadTask resume];}
 -(NSURLSession*)session{
     if (!self.urlSession) {
         NSURLSessionConfiguration *urlSessionConfiguration = [NSURLSessionConfiguration ephemeralSessionConfiguration];

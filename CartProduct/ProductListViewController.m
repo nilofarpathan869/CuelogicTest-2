@@ -59,6 +59,11 @@ IBOutlet UICollectionView *productListColloectionView;
     cell.vendorName.text = product.vendorName;
     cell.vendorAddress.text = product.vendorAddress;
     cell.addToCart.tag = indexPath.item;
+    [serviceManager createRequestToDownloadImage:[NSURL URLWithString:product.productImage] withCallback:^(NSData *data, NSError *error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            cell.productImage.image = [UIImage imageWithData:data];
+        });
+    }];
     [cell.addToCart addTarget:self action:@selector(addedToCart:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
 }

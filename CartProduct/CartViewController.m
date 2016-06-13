@@ -9,6 +9,7 @@
 #import "CartViewController.h"
 #import "CartViewCustomCell.h"
 #import "Product.h"
+#import "ServiceManager.h"
 
 @interface CartViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *productTableView;

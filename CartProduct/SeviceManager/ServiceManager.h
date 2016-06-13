@@ -12,9 +12,12 @@
     NSMutableArray *productsArray;
 }
 typedef void (^DownloadCompletionBlock)(NSMutableArray *resultsArray, NSError *error);
+typedef void (^DownloadImageBlock)(NSData *date, NSError *error);
+
 
 @property(nonatomic,strong)NSURLSession *urlSession;
 -(void)createRequestToGetProductsWithCallback:(DownloadCompletionBlock)completion;
+-(void)createRequestToDownloadImage:(NSURL*)imageUrl withCallback:(DownloadImageBlock)downloadImageTask ;
 + (ServiceManager*)sharedManager ;
 
 @end

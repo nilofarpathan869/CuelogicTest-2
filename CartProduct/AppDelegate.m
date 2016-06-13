@@ -43,6 +43,9 @@
     // Saves changes in the application's managed object context before the application terminates.
 //    [self saveContext];
 }
-
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
+    
+    return YES;
+}
 
 @end
