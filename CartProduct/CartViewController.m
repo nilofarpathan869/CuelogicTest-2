@@ -11,7 +11,9 @@
 #import "Product.h"
 #import "ServiceManager.h"
 
-@interface CartViewController ()
+@interface CartViewController (){
+    ServiceManager *manager;
+}
 @property (weak, nonatomic) IBOutlet UITableView *productTableView;
 
 @end
@@ -20,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    manager = [ServiceManager sharedManager];
     // Do any additional setup after loading the view.
 }
 
